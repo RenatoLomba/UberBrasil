@@ -437,6 +437,15 @@ div.botoes_uber_eats a {
 
 /*******************/
 
+/*** Página Suporte ***/
+
+.suporte {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+/*******************/
+
 .content h2 {
     font-size: 3em;
     line-height: 1.5;
