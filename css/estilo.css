@@ -442,6 +442,8 @@ div.botoes_uber_eats a {
 .suporte {
     display: grid;
     grid-template-rows: 1fr 1fr;
+    padding: 100px 60px;
+    grid-gap: 100px;
 }
 
 /*******************/
