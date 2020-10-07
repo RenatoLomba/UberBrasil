@@ -441,9 +441,38 @@ div.botoes_uber_eats a {
 
 .suporte {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     padding: 100px 60px;
-    grid-gap: 100px;
+    grid-gap: 30px;
+    justify-items: center;
+}
+
+.suporte div:first-child {
+    text-align: center;
+}
+
+.lista_contato {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    padding: 30px;
+    background: #E0E9FF;
+}
+
+.lista_contato li {
+    padding: 5px;
+    font-size: 1.4em;
+}
+
+.lista_contato ul:first-child {
+    text-align: center;
+}
+
+.lista_contato ul:first-child li {
+    font-weight: bold;
+}
+
+.lista_contato ul li + li {
+    border-top: 1px solid #13307a;
 }
 
 /*******************/
