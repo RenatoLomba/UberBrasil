@@ -130,6 +130,82 @@
                             serviços
                         </p>
                     </div>
+
+                    <!-- Formulário -->
+                    <form action="#" method="POST">
+                        
+                        <fieldset>
+                            <fieldset class="form_grupo">
+
+                                <!-- Nome -->
+                                <div class="form_campo">
+                                    <label for="nome">Nome</label>
+                                    <input type="text" name="nome" id="nome" value="" style="width: 10em;">
+                                </div>
+                                
+                                <!-- Sobrenome -->
+                                <div class="form_campo">
+                                    <label for="snome">Sobrenome</label>
+                                    <input type="text" name="snome" id="snome" value="" style="width: 10em;">
+                                </div>
+                            </fieldset>
+    
+                            <div class="form_campo">
+                                <!-- Sexo -->
+                                <label>Sexo</label>
+                                <label class="checkbox">
+                                    <input type="radio" name="sexo" value="masculino"> Masculino
+                                </label>
+                                <label class="checkbox">
+                                    <input type="radio" name="sexo" value="feminino"> Feminino
+                                </label>
+                            </div>
+                            
+                            <!-- E-mail -->
+                            <div class="form_campo">
+                                <label for="email">E-mail</label>
+                                <input type="email" name="email" value="" style="width: 20em;">
+                            </div>
+    
+                            <fieldset class="form_grupo">
+                                <!-- Cidade -->
+                                <div class="form_campo">
+                                    <label for="cidade">Cidade</label>
+                                    <input type="text" name="cidade" value="" style="width: 10em;">
+                                </div>
+
+                                <!-- Estado -->
+                                <div class="form_campo">
+                                    <label for="estado">Estado</label>
+                                    <select name="estado" id="estado">
+                                        <option value="">-----</option>
+                                        <option value="SP">SP</option>
+                                        <option value="BA">BA</option>
+                                        <option value="MG">MG</option>
+                                    </select>
+                                </div>
+                            </fieldset>
+                            
+                            <!-- Mensagem -->
+                            <div class="form_campo">
+                                <label for="mensagem">Mensagem</label>
+                                <textarea rows="6" id="mensagem" name="mensagem" style="width: 20em;"></textarea>
+                            </div>
+                            
+                            <!-- Newsletter -->
+                            <div class="form_campo">
+                                <label>Newsletter</label>
+                                <label>
+                                    <input type="checkbox" name="newsletter" value="1"> 
+                                    Gostaria de receber a Newsletter da Uber?
+                                </label>
+                            </div>
+
+                            <button type="submit" name="submit">Enviar</button>
+                        </fieldset>
+
+                    </form>
+                    <!-- Fim Formulário -->
                 </div>
                 <!-- Fim Comentários -->
                 
