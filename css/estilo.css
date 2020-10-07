@@ -475,6 +475,16 @@ div.botoes_uber_eats a {
     border-top: 1px solid #13307a;
 }
 
+.comentarios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 60px 100px 60px;
+    grid-gap: 30px;
+}
+
+.comentarios div:first-child {
+    text-align: center;
+}
 /*******************/
 
 .content h2 {
