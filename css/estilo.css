@@ -9,6 +9,14 @@ body {
     background: #fff;
 }
 
+fieldset {
+    border: 0;
+}
+
+body, input, select, textarea, button {
+    font-size: 1em;
+}
+
 /* BARRA DE ROLAGEM */
 body::-webkit-scrollbar {
     width: 0.25rem;
@@ -437,7 +445,7 @@ div.botoes_uber_eats a {
 
 /*******************/
 
-/*** Página Suporte ***/
+/*** PÁGINA SUPORTE ***/
 
 .suporte {
     display: grid;
@@ -485,6 +493,43 @@ div.botoes_uber_eats a {
 .comentarios div:first-child {
     text-align: center;
 }
+/*******************/
+
+/*** FORMULÁRIO ***/
+
+.form_grupo::before, .form_grupo::after {
+    content: " ";
+    display: table;
+}
+
+.form_grupo::after {
+    clear: both;
+}
+
+.form_campo {
+    margin-bottom: 0;
+}
+
+.form_campo label {
+    margin-bottom: 0.2em;
+    color: #666;
+    display: block;
+}
+
+fieldset.form_grupo .form_campo {
+    float: left;
+    margin-right: 1em;
+}
+
+.form_campo input[type="text"],
+.form_campo input[type="email"],
+.form_campo input[type="url"],
+.form_campo input[type="tel"],
+.form_campo select,
+.form_campo textarea {
+    
+}
+
 /*******************/
 
 .content h2 {
