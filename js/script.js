@@ -1,20 +1,36 @@
-function validar() {
+//Objeto do formulário de Contato
+let Contato = function() {
+    this.nome
+    this.snome
+    this.sexo
+    this.email
+    this.cidade
+    this.estado
+    this.mensagem
+    this.newsletter
+}
 
-    /*let lista_comentarios = ArrayBuffer('nome', 'sobre', 'sexo', 'email', 'cidade', 'estado', 'mensagem', 'newsletter')
+function validarContato() {
 
-    lista
- 
-    let nome = document.form_comentarios.nome.value
-    let sobre_nome = document.form_comentarios.snome.value
-    let sexo = document.form_comentarios.sexo.value
-    let email = document.form_comentarios.email.value
-    let cidade = document.form_comentarios.cidade.value
-    let estado = document.form_comentarios.estado.value
-    let mensagem = document.form_comentarios.mensagem.value
-    let newsletter = document.form_comentarios.newsletter.value
+    let contato = new Contato()
+    contato.nome = document.form_contato.nome.value
+    contato.snome = document.form_contato.snome.value
+    contato.sexo = document.form_contato.sexo.value
+    contato.email = document.form_contato.email.value
+    contato.cidade = document.form_contato.cidade.value
+    contato.estado = document.form_contato.estado.value
+    contato.mensagem = document.form_contato.mensagem.value
+    contato.newsletter = document.form_contato.newsletter.value
+    
+    if(contato.newsletter == 'marcado') {
+        alert('marcado')
+    } else {
+        alert('não marcado')
+    }
 
-    if(nome.length == 0) {
-        alert('Campo Nome em branco')
-    }*/
-
+    /*let lista = Array('nome', 'snome', 'newsletter')
+    lista['nome'] = document.form_contato.nome.value
+    lista['snome'] = document.form_contato.snome.value
+    lista['nome'] = document.form_contato.nome.value
+    alert(lista['nome'])*/
 }
