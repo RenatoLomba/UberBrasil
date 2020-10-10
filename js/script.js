@@ -10,8 +10,10 @@ let Contato = function() {
     this.newsletter
 }
 
+//Função que valida as informações do formulário de Contato
 function validarContato() {
 
+    //Recebendo e atribuindo ao objeto
     let contato = new Contato()
     contato.nome = document.form_contato.nome.value
     contato.snome = document.form_contato.snome.value
@@ -25,7 +27,5 @@ function validarContato() {
     } else {
         contato.newsletter = false
     }
-    
-    alert(contato.newsletter)
-    
+
 }
