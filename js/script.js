@@ -20,17 +20,12 @@ function validarContato() {
     contato.cidade = document.form_contato.cidade.value
     contato.estado = document.form_contato.estado.value
     contato.mensagem = document.form_contato.mensagem.value
-    contato.newsletter = document.form_contato.newsletter.value
-    
-    if(contato.newsletter == 'marcado') {
-        alert('marcado')
+    if(document.form_contato.newsletter.checked) {
+        contato.newsletter = true
     } else {
-        alert('não marcado')
+        contato.newsletter = false
     }
-
-    /*let lista = Array('nome', 'snome', 'newsletter')
-    lista['nome'] = document.form_contato.nome.value
-    lista['snome'] = document.form_contato.snome.value
-    lista['nome'] = document.form_contato.nome.value
-    alert(lista['nome'])*/
+    
+    alert(contato.newsletter)
+    
 }
