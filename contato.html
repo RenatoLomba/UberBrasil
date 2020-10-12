@@ -217,10 +217,16 @@
                             <!-- Newsletter -->
                             <div class="form_campo">
                                 <label for="newsletter">Newsletter</label>
-                                <label>
+                                <label class="checkbox">
                                     <input type="checkbox" name="newsletter" value="marcado" checked> 
                                     Gostaria de receber a Newsletter da Uber?
                                 </label>
+                            </div>
+
+                            <!-- Avalie -->
+                            <div class="form_campo">
+                                <label for="avalie">Avalie o nosso site (0-5)</label>
+                                <input required="required" min="0" max="5" type="range" name="avalie" style="width: 20em;">
                             </div>
 
                             <button class="form_botao" type="submit" name="submit" onclick="validarContato()">Enviar</button>
@@ -230,63 +236,6 @@
                     <!-- Fim Formulário -->
                 </div>
                 <!-- Fim Comentários -->
-                
-                <!-- Como funciona -->
-                <div class="como_funciona bg_azul">
-                    <img src="img/uber_funcionamento.jpg">
-                    <div>
-                        <h3>Como funciona</h3>
-                        <p>Saiba como utilizar os serviços que a Uber proporciona de forma rápida e prática, esclareça todas as suas dúvidas sobre o aplicativo e plataforma Uber.</p>
-                        <a href="sobre.html">Saiba mais<i class="fas fa-angle-right"></i></a>
-                    </div>
-                </div>
-                <!-- Fim Como Funciona -->
-                
-                <!-- Serviços -->
-                <div class="servicos">
-                    <div class="mesclar">
-                        <h3>Serviços para você</h3>
-                        <p>Conheço abaixo os tipos de serviços que a Uber oferece para seus usuários!</p>
-                        <a href="servicos.html">Saiba mais<i class="fas fa-angle-right"></i></a>
-                    </div>
-    
-                    <div class="categorias">
-                        <img src="img/uber_comfort_cartao.jpg" alt="Categorias">
-                        <h4>Categorias</h4>
-                        <p>Um uber para cada necessidade, descubra qual o tipo de Uber que melhor se encaixa a suas necessidades e ao seu bolso.</p>
-                    </div>
-
-                    <div class="uber_eats">
-                        <img src="img/uber_eats.jpg" alt="Uber Eats">
-                        <h4>Uber Eats</h4>
-                        <p>Utilizando o Uber Eats, com apenas um toque, receba em sua casa seu pedido de seu restaurante favorito.</p>
-                    </div>
-
-                    <div class="mobile">
-                        <img src="img/uber_app.jpg">
-                        <h4>Mobile</h4>
-                        <p>Baixe agora o nosso aplicativo em seu smartphone Android ou IOs, é rápido e fácil.</p>
-                    </div>
-                </div>
-                <!-- Fim Serviços -->
-                
-                <!-- Citação -->
-                <blockquote class="citacao bg_verde">
-                    <p>"Comentário de alguém super importante sobre a Uber..."</p>
-                    <cite>Tal Pessoa, idade, o que faz</cite>
-                </blockquote>
-                <!-- Fim Citação -->
-                
-                <div class="botoes">
-                    <a href="#" class="botao_cadastro">
-                        <span>Cadastre-se como Motorista</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="#" class="botao_cadastro">
-                        <span>Cadastre-se como Passageiro</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
                 
             </main>
             <!-- Fim Conteúdo Principal -->

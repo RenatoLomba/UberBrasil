@@ -1,4 +1,4 @@
-//Objeto do formulário de Contato
+//Função construtora do formulário de Contato
 let Contato = function() {
     this.nome
     this.snome
@@ -8,6 +8,8 @@ let Contato = function() {
     this.estado
     this.mensagem
     this.newsletter
+    this.data
+    this.avalie
 }
 
 //Função que valida as informações do formulário de Contato
@@ -27,5 +29,7 @@ function validarContato() {
     } else {
         contato.newsletter = false
     }
+    contato.data = new Date()
+    contato.avalie = document.form_contato.avalie.value
 
 }
