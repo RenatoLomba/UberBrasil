@@ -2,6 +2,7 @@
 * {
     padding: 0;
     margin: 0;
+    -moz-box-sizing: border-box;
 }
 
 body {
@@ -24,7 +25,6 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-track {
     background: #F0F5FF;
-    
 }
 
 body::-webkit-scrollbar-thumb {
@@ -619,6 +619,8 @@ fieldset.form_grupo .form_campo {
     color: rgba(0,0,0,.8);
     border-color: rgba(0,0,0,1); 
 }
+/********************/
+
 /********************/
 
 /* FOOTER */

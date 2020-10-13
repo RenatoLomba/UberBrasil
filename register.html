@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Uber Brasil - Registro</title>
+        <meta charset="utf-8">
+        
+        <!-- Responsividade -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Fonte Customizada -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+        
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        
+        <!-- Estilo CSS -->
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
+        <link rel="stylesheet" type="text/css" href="css/register.css">
+        
+        <!-- HTML5Shiv -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <![endif]-->
+    </head>
+    
+    <body class="registro">
+    
+        <div class="wrapper">
+            <div class="title">
+                Formulário de Registro
+            </div>
+        </div>
+
+        <div class="form">
+            <div class="input_field">
+                <label>Primeiro Nome</label>
+                <input type="text" class="input">
+            </div>
+
+            <div class="input_field">
+                <label>Sobrenome</label>
+                <input type="text" class="input">
+            </div>
+
+            <div class="input_field">
+                <label>Senha</label>
+                <input type="password" class="input">
+            </div>
+
+            <div class="input_field">
+                <label>Confirmar senha</label>
+                <input type="password" class="input">
+            </div>
+
+            <div class="input_field">
+                <label>Sexo</label>
+                <div class="custom_select">
+                    <select>
+                        <option value="">--Selecione--</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="input_field">
+                <label>Email</label>
+                <input type="email" class="input">
+            </div>
+
+            <div class="input_field">
+                <label>Telefone</label>
+                <input type="number" class="input">
+            </div>
+
+            <div class="input_field">
+                <label>Cidade</label>
+                <input type="text" class="input">
+            </div>
+
+            <div class="input_field">
+                <label>Estado</label>
+                <select required="required">
+                    <option value="">-----</option>
+                    <option value="SP">AC</option>
+                    <option value="SP">AM</option>
+                    <option value="BA">BA</option>
+                    <option value="BA">CE</option>
+                    <option value="BA">DF</option>
+                    <option value="SP">ES</option>
+                    <option value="BA">GO</option>
+                    <option value="BA">MA</option>
+                    <option value="BA">MT</option>
+                    <option value="BA">MS</option>
+                    <option value="MG">MG</option>
+                    <option value="BA">PA</option>
+                    <option value="BA">PB</option>
+                    <option value="BA">PR</option>
+                    <option value="BA">PE</option>
+                    <option value="BA">PI</option>
+                    <option value="BA">RJ</option>
+                    <option value="BA">RN</option>
+                    <option value="BA">RS</option>
+                    <option value="BA">RO</option>
+                    <option value="BA">RR</option>
+                    <option value="BA">SC</option>
+                    <option value="BA">SP</option>
+                    <option value="BA">SE</option>
+                    <option value="BA">TO</option>
+                </select>
+            </div>
+
+            <div class="input_field">
+                <label>CEP</label>
+                <input type="text" class="input">
+            </div>
+
+            <div class="input_field terms">
+                <label class="check">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <p>Você leu e concorda com os termos e condições?</p>
+            </div>
+
+            <div class="input_field">
+                <button type="submit" class="btn">Registrar</button>
+            </div>
+
+        </div>
+
+        <!-- Arquivo JS -->
+        <script src="js/script.js"></script>
+    
+    </body>
+</html>
