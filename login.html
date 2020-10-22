@@ -30,21 +30,33 @@
         <!-- Container -->
         <div class="container bg-light">
 
-            <div class="row justify-content-center pt-5 pb-5">
+            <div class="row p-5">
+                <div class="col">
+                    <div class="jumbotron">
+                        <h1 class="display-4">Página do usuário</h1>
+                        <p class="lead">
+                            Faça login na Uber e acesse os mais variados serviços dentro da sua conta.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
                 <div class="col-6">
+
                     <!-- Formulário -->
                     <form class="needs-validation" novalidate>
                         
                         
-                        <div class="form-group mt-5 mb-5">
+                        <div class="form-group mb-5">
                             <label for="reg_email">E-mail</label>
                             <div class="input-group">
                                 <input type="email" class="form-control" id="reg_email" name="reg_email" required="required" placeholder="email" aria-label="email" aria-describedby="basic-addon2">
                                 <div class="input-group-append">
                                     <span class="input-group-text" id="basic-addon2">@exemplo.com</span>
                                 </div>
+                                <div class="invalid-feedback">Email inválido</div>
                             </div>
-                            <div class="invalid-feedback">Email inválido</div>
                         </div>
                         
                         <div class="form-row mb-5">
