@@ -51,12 +51,12 @@
                             <div class="form-group col-md-6">
                                 <label for="reg_nome">Primeiro Nome</label>
                                 <input type="text" class="form-control" id="reg_nome" name="reg_nome" required="required">
-                                <div class="valid-feedback">Nome válido</div>
+                                <div class="invalid-feedback">Nome inválido</div>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="reg_snome">Último Nome</label>
                                 <input type="text" class="form-control" id="reg_snome" name="reg_snome" required="required">
-                                <div class="valid-feedback">Sobrenome válido</div>
+                                <div class="invalid-feedback">Sobrenome inválido</div>
                             </div>
                         </div>
                         <div class="form-group">
@@ -112,17 +112,22 @@
                             <div class="form-group col-md-8">
                                 <label for="reg_email">E-mail</label>
                                 <div class="input-group">
-                                    <input type="email" class="form-control" id="reg_email" name="reg_email" required="required" placeholder="email" aria-label="email" aria-describedby="basic-addon2">
+                                    <input type="email" class="form-control" id="reg_email" name="reg_email" required="required" aria-label="email" aria-describedby="basic-addon2">
                                     <div class="input-group-append">
                                         <span class="input-group-text" id="basic-addon2">@exemplo.com</span>
-                                        <div class="invalid-feedback">Email inválido</div>
                                     </div>
+                                    <div class="invalid-feedback">Email inválido</div>
                                 </div>
                             </div>
                             <div class="form-group col-md-4">
-                                <label for="reg_fone">(DDD) Telefone</label>
-                                <input type="text" minlength="11" maxlength="11" class="form-control" id="reg_fone" name="reg_fone" required="required">
-                                <div class="invalid-feedback">Telefone inválido</div>
+                                <label for="reg_fone">Telefone</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon3">(DDD)</span>
+                                    </div>
+                                    <input type="text" minlength="11" maxlength="11" class="form-control" id="reg_fone" name="reg_fone" required="required" aria-label="telefone" aria-describedby="basic-addon3">
+                                    <div class="invalid-feedback">Telefone inválido</div>
+                                </div>
                             </div>
                         </div>
                         <div class="form-row">
