@@ -53,24 +53,25 @@ class Modal {
         this.button = button
     }
 
-    modalErro() {
+    modalErro(titulo, mensagem) {
         this.header.classList.add('text-danger')
-        this.title.innerHTML = 'Erro'
-        this.body.innerHTML = 'Preencha as informações corretamente...'
+        this.title.innerHTML = titulo
+        this.body.innerHTML = mensagem
         this.button.classList.add('btn-danger')
         $('#MyModal').modal('show')
     }
 
-    modalSucesso() {
+    modalSucesso(titulo, mensagem) {
         this.header.classList.add('text-success')
-        this.title.innerHTML = 'Sucesso'
-        this.body.innerHTML = 'Informações gravadas com sucesso!'
+        this.title.innerHTML = titulo
+        this.body.innerHTML = mensagem
         this.button.classList.add('btn-success')
         $('#MyModal').modal('show')
     }
 }
 let modal = new Modal()
 
+//Funcão que vai guardar os elementos HTML dentro da classe Modal
 function criarModal() {
     
     let header = document.getElementById('modal_header')
@@ -117,6 +118,7 @@ function validarContato() {
           if (form.checkValidity() === false) {
             event.preventDefault();
             event.stopPropagation();
+            modal.modalErro('Erro ao cadastrar usuário', 'Dados preenchidos incorretamente...')
           }
           form.classList.add('was-validated');
         }, false);
