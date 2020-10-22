@@ -25,7 +25,7 @@
         <![endif]-->
     </head>
     
-    <body class="bg-dark pt-5 pb-5">
+    <body onload="criarModal()" class="bg-dark pt-5 pb-5">
 
         
 
@@ -59,10 +59,17 @@
                                 <div class="invalid-feedback">Sobrenome inválido</div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="reg_rua">Rua/Avenida</label>
-                            <input type="text" class="form-control" id="reg_rua" name="reg_rua" required="required">
-                            <div class="invalid-feedback">Rua inválida</div>
+                        <div class="form-row">
+                            <div class="form-group col-md-8">
+                                <label for="reg_rua">Rua/Avenida</label>
+                                <input type="text" class="form-control" id="reg_rua" name="reg_rua" required="required">
+                                <div class="invalid-feedback">Rua inválida</div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="reg_cpf">CPF</label>
+                                <input type="text" minlength="11" maxlength="11" class="form-control" id="reg_cpf" name="reg_cpf" required="required">
+                                <div class="invalid-feedback">CPF inválido</div>
+                            </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
@@ -181,7 +188,7 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header" id="modal_header">
-                                <h5 class="modal-title" id="exampleModalLabel" id="modal_title">
+                                <h5 class="modal-title" id="modal_title">
 
                                 </h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -192,7 +199,7 @@
 
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal" id="modal_button">Fechar</button>
+                                <button type="button" class="btn" data-dismiss="modal" id="modal_button">Fechar</button>
                             </div>
                         </div>
                     </div>

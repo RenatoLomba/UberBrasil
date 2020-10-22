@@ -1,15 +1,85 @@
-//Função construtora do formulário de Contato
-let Contato = function() {
-    this.nome
-    this.snome
-    this.sexo
-    this.email
-    this.cidade
-    this.estado
-    this.mensagem
-    this.newsletter
-    this.data
-    this.avalie
+//Classe do formulário de Contato
+class Contato {
+    constructor() {
+        this.id
+        this.nome
+        this.sexo
+        this.email
+        this.endereco
+        this.mensagem
+        this.newsletter
+        this.data
+        this.avalie
+    }
+
+    guardaInformacoes(nome, sexo, email, endereco, mensagem, newsletter, data, avalie) {
+        this.nome = nome
+        this.sexo = sexo
+        this.email = email
+        this.endereco = endereco
+        this.mensagem = mensagem
+        this.newsletter = newsletter
+        this.data = data
+        this.avalie = avalie
+    }
+}
+
+//Classe do formulário de Cadastro
+class Cadastro {
+    constructor() {
+        this.cpf
+        this.nome
+        this.endereco
+        this.email
+        this.telefone
+        this.senha
+        this.tipo_cadastro
+    }
+}
+
+//Classe do Modal
+class Modal {
+    constructor() {
+        this.header
+        this.title
+        this.body
+        this.button
+    }
+
+    moldarModal(header, title, body, button) {
+        this.header = header
+        this.title = title
+        this.body = body
+        this.button = button
+    }
+
+    modalErro() {
+        this.header.classList.add('text-danger')
+        this.title.innerHTML = 'Erro'
+        this.body.innerHTML = 'Preencha as informações corretamente...'
+        this.button.classList.add('btn-danger')
+        $('#MyModal').modal('show')
+    }
+
+    modalSucesso() {
+        this.header.classList.add('text-success')
+        this.title.innerHTML = 'Sucesso'
+        this.body.innerHTML = 'Informações gravadas com sucesso!'
+        this.button.classList.add('btn-success')
+        $('#MyModal').modal('show')
+    }
+}
+let modal = new Modal()
+
+function criarModal() {
+    
+    let header = document.getElementById('modal_header')
+    let title = document.getElementById('modal_title')
+    let body = document.getElementById('modal_body')
+    let button = document.getElementById('modal_button')
+
+    modal.moldarModal(header, title, body, button)
+
 }
 
 //Função que valida as informações do formulário de Contato
@@ -17,20 +87,21 @@ function validarContato() {
 
     //Recebendo e atribuindo ao objeto
     let contato = new Contato()
-    contato.nome = document.form_contato.nome.value
-    contato.snome = document.form_contato.snome.value
-    contato.sexo = document.form_contato.sexo.value
-    contato.email = document.form_contato.email.value
-    contato.cidade = document.form_contato.cidade.value
-    contato.estado = document.form_contato.estado.value
-    contato.mensagem = document.form_contato.mensagem.value
+    let nome = document.form_contato.nome.value + " " + document.form_contato.snome.value
+    let sexo = document.form_contato.sexo.value
+    let email = document.form_contato.email.value
+    let endereco = document.form_contato.cidade.value + ", " + document.form_contato.estado.value 
+    let mensagem = document.form_contato.mensagem.value
+    let newsletter
     if(document.form_contato.newsletter.checked) {
-        contato.newsletter = true
+        newsletter = true
     } else {
-        contato.newsletter = false
+        newsletter = false
     }
-    contato.data = new Date()
-    contato.avalie = document.form_contato.avalie.value
+    let data = new Date()
+    let avalie = document.form_contato.avalie.value
+
+    contato.guardaInformacoes(nome, sexo, email, endereco, mensagem, newsletter, data, avalie)
 
 }
 
@@ -48,7 +119,6 @@ function validarContato() {
             event.stopPropagation();
           }
           form.classList.add('was-validated');
-          validarRegistro() //IMPLEMENTAR VALIDAÇÃO DOS CAMPOS
         }, false);
       });
     }, false);
