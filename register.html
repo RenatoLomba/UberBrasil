@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <title>Uber Brasil - Registro</title>
+        <title>Uber Brasil - Cadastro</title>
         <meta charset="utf-8">
         
         <!-- Responsividade -->
@@ -25,12 +25,12 @@
         <![endif]-->
     </head>
     
-    <body>
+    <body class="bg-dark pt-5 pb-5">
 
         <!-- Container -->
-        <div class="container">
+        <div class="container bg-light">
 
-            <div class="row justify-content-center p-3">
+            <div class="row justify-content-center pt-5 pb-5">
                 <div class="col-8">
                     <!-- Formulário -->
                     <form class="needs-validation" novalidate>
@@ -91,7 +91,7 @@
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="reg_cep">CEP</label>
-                                <input type="text" maxlength="8" class="form-control" id="reg_cep" name="reg_cep" required="required">
+                                <input type="text" minlength="8" maxlength="8" class="form-control" id="reg_cep" name="reg_cep" required="required">
                                 <div class="invalid-feedback">CEP inválido</div>
                             </div>
                         </div>
@@ -108,7 +108,7 @@
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="reg_fone">(DDD) Telefone</label>
-                                <input type="text" maxlength="11" class="form-control" id="reg_fone" name="reg_fone" required="required">
+                                <input type="text" minlength="11" maxlength="11" class="form-control" id="reg_fone" name="reg_fone" required="required">
                                 <div class="invalid-feedback">Telefone inválido</div>
                             </div>
                         </div>
@@ -146,7 +146,14 @@
                                 <label class="form-check-label" for="reg_motorista">Motorista</label>
                             </div>
                         </div>
-                        <button class="btn btn-primary btn-block" type="submit">Concluir</button>
+                        <div class="row mb-5">
+                            <div class="col">
+                                <button class="btn btn-primary btn-lg btn-block" type="submit">Cadastrar</button>
+                            </div>
+                            <div class="col">
+                                <a href="index.html" class="btn btn-danger btn-lg btn-block">Voltar</a>
+                            </div>
+                        </div>
                     </form>
                 </div>
                 <!-- Fim Formulário -->
