@@ -46,7 +46,7 @@
             <div class="row justify-content-center">
                 <div class="col-8">
                     <!-- Formulário -->
-                    <form class="needs-validation" novalidate>
+                    <form class="needs-validation" novalidate name="form_cadastro" method="post" action="">
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="reg_nome">Primeiro Nome</label>
@@ -57,18 +57,34 @@
                                 <label for="reg_snome">Último Nome</label>
                                 <input type="text" class="form-control" id="reg_snome" name="reg_snome" required="required">
                                 <div class="invalid-feedback">Sobrenome inválido</div>
-                            </div>
+                            </div> 
                         </div>
                         <div class="form-row">
-                            <div class="form-group col-md-8">
-                                <label for="reg_rua">Rua/Avenida</label>
-                                <input type="text" class="form-control" id="reg_rua" name="reg_rua" required="required">
-                                <div class="invalid-feedback">Rua inválida</div>
+                            <div class="form-group col-md-4">
+                                <label for="reg_sexo">Sexo</label>
+                                <select name="reg_sexo" id="reg_sexo" class="custom-select" required="required">
+                                    <option selected disabled value="">--</option>
+                                    <option value="masculino">Masculino</option>
+                                    <option value="feminino">Feminino</option>
+                                </select>
+                                <div class="invalid-feedback">Sexo inválido</div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="reg_data">Data de Nascimento</label>
+                                <input type="date" class="form-control" id="reg_data" name="reg_data" required="required">
+                                <div class="invalid-feedback">Data de nascimento inválida</div>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="reg_cpf">CPF</label>
                                 <input type="text" minlength="11" maxlength="11" class="form-control" id="reg_cpf" name="reg_cpf" required="required">
                                 <div class="invalid-feedback">CPF inválido</div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <label for="reg_rua">Rua/Avenida</label>
+                                <input type="text" class="form-control" id="reg_rua" name="reg_rua" required="required">
+                                <div class="invalid-feedback">Rua inválida</div>
                             </div>
                         </div>
                         <div class="form-row">
@@ -81,31 +97,31 @@
                                 <label for="reg_estado">Estado</label>
                                 <select name="reg_estado" id="reg_estado" class="custom-select" required="required">
                                     <option selected disabled value="">--</option>
-                                        <option value="SP">AC</option>
-                                        <option value="SP">AM</option>
-                                        <option value="BA">BA</option>
-                                        <option value="BA">CE</option>
-                                        <option value="BA">DF</option>
-                                        <option value="SP">ES</option>
-                                        <option value="BA">GO</option>
-                                        <option value="BA">MA</option>
-                                        <option value="BA">MT</option>
-                                        <option value="BA">MS</option>
-                                        <option value="MG">MG</option>
-                                        <option value="BA">PA</option>
-                                        <option value="BA">PB</option>
-                                        <option value="BA">PR</option>
-                                        <option value="BA">PE</option>
-                                        <option value="BA">PI</option>
-                                        <option value="BA">RJ</option>
-                                        <option value="BA">RN</option>
-                                        <option value="BA">RS</option>
-                                        <option value="BA">RO</option>
-                                        <option value="BA">RR</option>
-                                        <option value="BA">SC</option>
-                                        <option value="BA">SP</option>
-                                        <option value="BA">SE</option>
-                                        <option value="BA">TO</option>
+                                    <option value="SP">AC</option>
+                                    <option value="SP">AM</option>
+                                    <option value="BA">BA</option>
+                                    <option value="BA">CE</option>
+                                    <option value="BA">DF</option>
+                                    <option value="SP">ES</option>
+                                    <option value="BA">GO</option>
+                                    <option value="BA">MA</option>
+                                    <option value="BA">MT</option>
+                                    <option value="BA">MS</option>
+                                    <option value="MG">MG</option>
+                                    <option value="BA">PA</option>
+                                    <option value="BA">PB</option>
+                                    <option value="BA">PR</option>
+                                    <option value="BA">PE</option>
+                                    <option value="BA">PI</option>
+                                    <option value="BA">RJ</option>
+                                    <option value="BA">RN</option>
+                                    <option value="BA">RS</option>
+                                    <option value="BA">RO</option>
+                                    <option value="BA">RR</option>
+                                    <option value="BA">SC</option>
+                                    <option value="BA">SP</option>
+                                    <option value="BA">SE</option>
+                                    <option value="BA">TO</option>
                                 </select>
                                 <div class="invalid-feedback">Estado inválido</div>
                             </div>

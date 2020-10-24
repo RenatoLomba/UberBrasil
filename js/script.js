@@ -24,19 +24,6 @@ class Contato {
     }
 }
 
-//Classe do formulário de Cadastro
-class Cadastro {
-    constructor() {
-        this.cpf
-        this.nome
-        this.endereco
-        this.email
-        this.telefone
-        this.senha
-        this.tipo_cadastro
-    }
-}
-
 //Classe do Modal
 class Modal {
     constructor() {
