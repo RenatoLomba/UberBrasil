@@ -40,7 +40,13 @@ class Modal {
         this.button = button
     }
 
+    limparModal() {
+        this.header.classList.remove('text-danger', 'text-success')
+        this.button.classList.remove('btn-danger', 'btn-success')
+    }
+
     modalErro(titulo, mensagem) {
+        this.limparModal()
         this.header.classList.add('text-danger')
         this.title.innerHTML = titulo
         this.body.innerHTML = mensagem
@@ -49,6 +55,7 @@ class Modal {
     }
 
     modalSucesso(titulo, mensagem) {
+        this.limparModal()
         this.header.classList.add('text-success')
         this.title.innerHTML = titulo
         this.body.innerHTML = mensagem
@@ -105,7 +112,9 @@ function validarContato() {
           if (form.checkValidity() === false) {
             event.preventDefault();
             event.stopPropagation();
-            modal.modalErro('Erro ao cadastrar usuário', 'Dados preenchidos incorretamente...')
+            modal.modalErro('Erro ao cadastrar usuário', 'Dados preenchidos incorretamente...');
+          } else {
+            modal.modalSucesso('Sucesso ao cadastrar usuário', 'Dados enviados ao servidos com sucesso!');
           }
           form.classList.add('was-validated');
         }, false);
