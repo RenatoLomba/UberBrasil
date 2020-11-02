@@ -46,16 +46,16 @@
             <div class="row justify-content-center">
                 <div class="col-8">
                     <!-- Formulário -->
-                    <form class="needs-validation" novalidate name="form_cadastro" method="post" action="">
+                    <form class="needs-validation" novalidate name="form_cadastro" method="post" action="submit_user.jsp">
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="reg_nome">Primeiro Nome</label>
-                                <input type="text" class="form-control" id="reg_nome" name="reg_nome" required="required">
+                                <input type="text" class="form-control" id="reg_nome" name="reg_nome" required="required" placeholder="Matthew">
                                 <div class="invalid-feedback">Nome inválido</div>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="reg_snome">Último Nome</label>
-                                <input type="text" class="form-control" id="reg_snome" name="reg_snome" required="required">
+                                <input type="text" class="form-control" id="reg_snome" name="reg_snome" required="required" placeholder="Mercer">
                                 <div class="invalid-feedback">Sobrenome inválido</div>
                             </div> 
                         </div>
@@ -64,8 +64,8 @@
                                 <label for="reg_sexo">Sexo</label>
                                 <select name="reg_sexo" id="reg_sexo" class="custom-select" required="required">
                                     <option selected disabled value="">--</option>
-                                    <option value="masculino">Masculino</option>
-                                    <option value="feminino">Feminino</option>
+                                    <option value="M">Masculino</option>
+                                    <option value="F">Feminino</option>
                                 </select>
                                 <div class="invalid-feedback">Sexo inválido</div>
                             </div>
@@ -76,21 +76,21 @@
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="reg_cpf">CPF</label>
-                                <input type="text" minlength="11" maxlength="11" class="form-control" id="reg_cpf" name="reg_cpf" required="required">
+                                <input type="text" minlength="11" maxlength="11" class="form-control" id="reg_cpf" name="reg_cpf" required="required" placeholder="11122233344">
                                 <div class="invalid-feedback">CPF inválido</div>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col">
                                 <label for="reg_rua">Rua/Avenida</label>
-                                <input type="text" class="form-control" id="reg_rua" name="reg_rua" required="required">
+                                <input type="text" class="form-control" id="reg_rua" name="reg_rua" required="required" placeholder="Rua Força Pública, 89">
                                 <div class="invalid-feedback">Rua inválida</div>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="reg_cidade">Cidade</label>
-                                <input type="text" class="form-control" id="reg_cidade" name="reg_cidade" required="required">
+                                <input type="text" class="form-control" id="reg_cidade" name="reg_cidade" required="required" placeholder="Guarulhos">
                                 <div class="invalid-feedback">Cidade inválida</div>
                             </div>
                             <div class="form-group col-md-2">
@@ -127,7 +127,7 @@
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="reg_cep">CEP</label>
-                                <input type="text" minlength="8" maxlength="8" class="form-control" id="reg_cep" name="reg_cep" required="required">
+                                <input type="text" minlength="8" maxlength="8" class="form-control" id="reg_cep" name="reg_cep" required="required" placeholder="55566666">
                                 <div class="invalid-feedback">CEP inválido</div>
                             </div>
                         </div>
@@ -135,7 +135,7 @@
                             <div class="form-group col-md-8">
                                 <label for="reg_email">E-mail</label>
                                 <div class="input-group">
-                                    <input type="email" class="form-control" id="reg_email" name="reg_email" required="required" aria-label="email" aria-describedby="basic-addon2">
+                                    <input type="email" class="form-control" id="reg_email" name="reg_email" required="required" aria-label="email" aria-describedby="basic-addon2" placeholder="marisha.ray@critrole.com">
                                     <div class="input-group-append">
                                         <span class="input-group-text" id="basic-addon2">@exemplo.com</span>
                                     </div>
@@ -148,7 +148,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon3">(DDD)</span>
                                     </div>
-                                    <input type="text" minlength="11" maxlength="11" class="form-control" id="reg_fone" name="reg_fone" required="required" aria-label="telefone" aria-describedby="basic-addon3">
+                                    <input type="text" minlength="11" maxlength="11" class="form-control" id="reg_fone" name="reg_fone" required="required" aria-label="telefone" aria-describedby="basic-addon3" placeholder="11949580307">
                                     <div class="invalid-feedback">Telefone inválido</div>
                                 </div>
                             </div>
