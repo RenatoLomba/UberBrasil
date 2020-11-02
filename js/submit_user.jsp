@@ -1,10 +1,17 @@
 <%@page language="java" import="java.sql.*" %>
+<%@page language="java" import="java.text.SimpleDateFormat" %>
+<%@page language="java" import="java.util.*" %>
 
 <%
 	//Recupera informações do usuário
     String nome 	= request.getParameter("reg_nome") + " " + request.getParameter("reg_snome");
     String sexo 	= request.getParameter("reg_sexo");
     String data 	= request.getParameter("reg_data");
+
+    //Convertendo a data de dd/mm/yyyy para yyyy/mm/dd
+    SimpleDateFormat formato = new SimpleDateFormat("yyyy/MM/dd");
+    String dataFormatada = formato.format(data);
+
     String cpf 		= request.getParameter("reg_cpf");
     String endereco = request.getParameter("reg_rua") + "-" + request.getParameter("reg_cidade") + "-" + 
                         request.getParameter("reg_estado") + "-" + request.getParameter("reg_cep");
@@ -21,7 +28,7 @@
 	String driver  	= "com.mysql.jdbc.Driver";
 
 	//String de inserção no banco de dados
-	String insert 	= "INSERT INTO usuario(CPF, NOME, SEXO, ENDERECO, EMAIL, TELEFONE, SENHA, DATA_NASCIMENTO) VALUES ('" + cpf + "', '" + nome + "', '" + sexo + "', '" + endereco + "', '" + email + "', '" + telefone + "', '" + senha + "', '" + data + "')";
+	String insert 	= "INSERT INTO usuario(CPF, NOME, SEXO, ENDERECO, EMAIL, TELEFONE, SENHA, DATA_NASCIMENTO) VALUES ('" + cpf + "', '" + nome + "', '" + sexo + "', '" + endereco + "', '" + email + "', '" + telefone + "', '" + senha + "', '" + dataFormatada + "')";
 
 	//Carregar o driver do mysql
 	Class.forName(driver);
