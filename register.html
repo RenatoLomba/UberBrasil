@@ -76,7 +76,10 @@
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="reg_cpf">CPF</label>
-                                <input type="text" minlength="11" maxlength="11" class="form-control" id="reg_cpf" name="reg_cpf" required="required" placeholder="11122233344">
+                                <input type="text" \
+                                pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" \
+                                minlength="11" maxlength="11" class="form-control" id="reg_cpf" \
+                                name="reg_cpf" required="required">
                                 <div class="invalid-feedback">CPF inválido</div>
                             </div>
                         </div>
@@ -127,7 +130,7 @@
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="reg_cep">CEP</label>
-                                <input type="text" minlength="8" maxlength="8" class="form-control" id="reg_cep" name="reg_cep" required="required" placeholder="55566666">
+                                <input type="text" minlength="8" maxlength="8" class="form-control" id="reg_cep" name="reg_cep" required="required" placeholder="55555666">
                                 <div class="invalid-feedback">CEP inválido</div>
                             </div>
                         </div>
