@@ -2,22 +2,39 @@
 
 <%
 
+    String email = request.getParameter("log_email");
+    String senha = request.getParameter("log_senha");  
+
     String db   	= "dbouber";
     String user 	= "root";
     String password	= "";
     String url     	= "jdbc:mysql://localhost:3306/" + db;
     String driver  	= "com.mysql.jdbc.Driver";
+    String select  = "select * from cadastro" ;
 
 	Class.forName( driver ) ;
 
-	Connection conexao ;
-	conexao = DriverManager.getConnection( url , usuario , senha ) ;
+    Connection _conexao ;
+    Statement stm;
+    
+    if() {
+        _conexao = DriverManager.getConnection( url , usuario , senha ) ;
+        stm = _conexao.createStatement() ;
+    } else {
+        _conexao = false;
+        ctm = false;
+    }
 
-	String sql = "select * from cadastro" ;
+    ResultSet dados;
 
-	Statement stm = conexao.createStatement() ;
-
-    ResultSet dados = stm.executeQuery( sql ) ;
+    try {
+        dados = stm.executeQuery(select) ;
+    } catch(Exception ex) {
+        out.println(ex);
+    } finally {
+        _conexao.close();
+        stm.close();
+    }
    
 %>
 
