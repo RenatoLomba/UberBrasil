@@ -17,33 +17,7 @@
 
 	Statement stm = conexao.createStatement() ;
 
-	ResultSet dados = stm.executeQuery( sql ) ;
-
-	/*out.print("<table border=1>") ;
-
-	out.print("<tr>") ;
-		out.print("<th>Nome</th>") ;
-		out.print("<th>Idade</th>") ;
-		out.print("<th>e-mail</th>") ;
-	out.print("</tr>") ;
-
-	while ( dados.next() ) {
-		out.print("<tr>") ;
-			out.print( "<td>") ;
-				out.print( dados.getString("nome") );
-			out.print( "</td>") ;
-
-			out.print( "<td>") ;
-				out.print( dados.getString("idade") );
-			out.print( "</td>") ;
-
-			out.print( "<td>") ;
-				out.print( dados.getString("email") );
-			out.print( "</td>") ;
-		out.print("</tr>") ;
-	}
-
-    out.print( "</table> ") ;*/
+    ResultSet dados = stm.executeQuery( sql ) ;
    
 %>
 
@@ -82,45 +56,56 @@
             <div class="row p-5">
                 <div class="col">
                     <div class="jumbotron">
-                        <h1 class="display-4">Página do usuário</h1>
+                        <h1 class="display-4">Administração</h1>
                         <p class="lead">
-                            Faça login na Uber e acesse os mais variados serviços dentro da sua conta.
+                            Página de administração de usuários.
                         </p>
                     </div>
                 </div>
             </div>
 
             <div class="row justify-content-center">
-                <div class="col-6">
+                <div class="col-11">
 
                     <!-- Tabela Usuários -->
                     <table id="tabela_user" class="table table-hover">
-                        <thead>
+                        <thead class="thead-dark">
                           <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
+                            <th scope="col">CPF</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Data de Nascimento</th>
+                            <th scope="col">E-mail</th>
+                            <th scope="col">Telefone</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                          </tr>
-                          <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
-                            <td>@twitter</td>
-                          </tr>
+                            <%
+
+                            while ( dados.next() ) {
+                                out.print("<tr>") ;
+                                    out.print( "<td>") ;
+                                        out.print( dados.getString("CPF") );
+                                    out.print( "</td>") ;
+                        
+                                    out.print( "<td>") ;
+                                        out.print( dados.getString("NOME") );
+                                    out.print( "</td>") ;
+                        
+                                    out.print( "<td>") ;
+                                        out.print( dados.getString("DATA") );
+                                    out.print( "</td>") ;
+
+                                    out.print( "<td>") ;
+                                        out.print( dados.getString("EMAIL") );
+                                    out.print( "</td>") ;
+
+                                    out.print( "<td>") ;
+                                        out.print( dados.getString("TELEFONE") );
+                                    out.print( "</td>") ;
+                                out.print("</tr>") ;
+                            }
+
+                            %>
                         </tbody>
                     </table>
                     <!-- Fim Tabela Usuários -->
