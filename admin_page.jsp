@@ -41,7 +41,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <title>Uber Brasil - Login</title>
+        <title>Uber Brasil - Administration</title>
         <meta charset="utf-8">
         
         <!-- Responsividade -->
@@ -58,6 +58,9 @@
         
         <!-- Estilo CSS -->
         <link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+        <!-- Favicon -->
+        <link rel="icon" href="img/uber_favicon.png">
         
         <!-- HTML5Shiv -->
         <!--[if lt IE 9]>
