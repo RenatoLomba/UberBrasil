@@ -74,7 +74,7 @@
         <![endif]-->
     </head>
     
-    <body onload="criarModal()" class="bg-dark pt-5 pb-5">
+    <body class="bg-dark pt-5 pb-5">
 
         <!-- Container -->
         <div class="container bg-light">
