@@ -2,9 +2,6 @@
 
 <%
 
-    String email = request.getParameter("log_email");
-    String senha = request.getParameter("log_senha");
-
     String db   	= "dbouber";
     String user 	= "root";
     String password	= "";
@@ -22,7 +19,7 @@
 
 	ResultSet dados = stm.executeQuery( sql ) ;
 
-	out.print("<table border=1>") ;
+	/*out.print("<table border=1>") ;
 
 	out.print("<tr>") ;
 		out.print("<th>Nome</th>") ;
@@ -46,7 +43,7 @@
 		out.print("</tr>") ;
 	}
 
-    out.print( "</table> ") ;
+    out.print( "</table> ") ;*/
    
 %>
 
