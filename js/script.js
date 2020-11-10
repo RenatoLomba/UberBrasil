@@ -112,9 +112,9 @@ function validarContato() {
           if (form.checkValidity() === false) {
             event.preventDefault();
             event.stopPropagation();
-            modal.modalErro('Erro ao cadastrar usuário', 'Dados preenchidos incorretamente...');
+            modal.modalErro('Erro ao processar informações', 'Dados preenchidos incorretamente...');
           } else {
-            modal.modalSucesso('Sucesso ao cadastrar usuário', 'Dados enviados ao servidos com sucesso!');
+            modal.modalSucesso('Sucesso na requisição', 'Dados enviados ao servidor com sucesso!');
           }
           form.classList.add('was-validated');
         }, false);

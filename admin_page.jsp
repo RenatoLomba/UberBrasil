@@ -1,43 +1,5 @@
 <%@page language="java" import="java.sql.*"  %>
 
-<%
-
-    String email = request.getParameter("log_email");
-    String senha = request.getParameter("log_senha");  
-
-    String db   	= "dbouber";
-    String user 	= "root";
-    String password	= "";
-    String url     	= "jdbc:mysql://localhost:3306/" + db;
-    String driver  	= "com.mysql.jdbc.Driver";
-    String select  = "select * from cadastro" ;
-
-	Class.forName( driver ) ;
-
-    Connection _conexao ;
-    Statement stm;
-    
-    if() {
-        _conexao = DriverManager.getConnection( url , usuario , senha ) ;
-        stm = _conexao.createStatement() ;
-    } else {
-        _conexao = false;
-        ctm = false;
-    }
-
-    ResultSet dados;
-
-    try {
-        dados = stm.executeQuery(select) ;
-    } catch(Exception ex) {
-        out.println(ex);
-    } finally {
-        _conexao.close();
-        stm.close();
-    }
-   
-%>
-
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -101,18 +63,40 @@
                         <tbody>
                             <%
 
+                            String email = request.getParameter("log_email");
+                            String senha = request.getParameter("log_senha");
+
+                            String db   	= "dbouber";
+                            String user 	= "root";
+                            String password	= "";
+                            String url     	= "jdbc:mysql://localhost:3306/" + db;
+                            String driver  	= "com.mysql.jdbc.Driver";
+                            String select  = "select * from usuario" ;
+
+                            Class.forName( driver ) ;
+
+                            Connection _conexao ;
+                            _conexao = DriverManager.getConnection( url , user , password ) ;
+                            Statement stm;
+                            stm = _conexao.createStatement() ;
+
+                            ResultSet dados;
+                            dados = stm.executeQuery(select) ;
+
+                            
+
                             while ( dados.next() ) {
                                 out.print("<tr>") ;
                                     out.print( "<td>") ;
                                         out.print( dados.getString("CPF") );
                                     out.print( "</td>") ;
-                        
+
                                     out.print( "<td>") ;
                                         out.print( dados.getString("NOME") );
                                     out.print( "</td>") ;
-                        
+
                                     out.print( "<td>") ;
-                                        out.print( dados.getString("DATA") );
+                                        out.print( dados.getString("DATA_NASCIMENTO") );
                                     out.print( "</td>") ;
 
                                     out.print( "<td>") ;
@@ -125,7 +109,10 @@
                                 out.print("</tr>") ;
                             }
 
-                            %>
+                            _conexao.close();
+                            stm.close();
+                        
+                        %>
                         </tbody>
                     </table>
                     <!-- Fim Tabela Usuários -->
