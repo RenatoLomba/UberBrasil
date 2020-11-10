@@ -1,5 +1,29 @@
 <%@page language="java" import="java.sql.*"  %>
 
+<%
+
+    String email = request.getParameter("log_email");
+    String senha = request.getParameter("log_senha");
+
+    String db   	= "dbouber";
+    String user 	= "root";
+    String password	= "";
+    String url     	= "jdbc:mysql://localhost:3306/" + db;
+    String driver  	= "com.mysql.jdbc.Driver";
+    String select  = "select * from usuario" ;
+
+    Class.forName( driver ) ;
+
+    Connection _conexao ;
+    _conexao = DriverManager.getConnection( url , user , password ) ;
+    Statement stm;
+    stm = _conexao.createStatement() ;
+
+    ResultSet dados;
+    dados = stm.executeQuery(select) ;
+
+%>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -61,56 +85,31 @@
                           </tr>
                         </thead>
                         <tbody>
-                            <%
+                        <%
+                        
+                        while ( dados.next() ) {
+                            out.print("<tr>") ;
+                                out.print( "<td>") ;
+                                    out.print( dados.getString("CPF") );
+                                out.print( "</td>") ;
 
-                            String email = request.getParameter("log_email");
-                            String senha = request.getParameter("log_senha");
+                                out.print( "<td>") ;
+                                    out.print( dados.getString("NOME") );
+                                out.print( "</td>") ;
 
-                            String db   	= "dbouber";
-                            String user 	= "root";
-                            String password	= "";
-                            String url     	= "jdbc:mysql://localhost:3306/" + db;
-                            String driver  	= "com.mysql.jdbc.Driver";
-                            String select  = "select * from usuario" ;
+                                out.print( "<td>") ;
+                                    out.print( dados.getString("DATA_NASCIMENTO") );
+                                out.print( "</td>") ;
 
-                            Class.forName( driver ) ;
+                                out.print( "<td>") ;
+                                    out.print( dados.getString("EMAIL") );
+                                out.print( "</td>") ;
 
-                            Connection _conexao ;
-                            _conexao = DriverManager.getConnection( url , user , password ) ;
-                            Statement stm;
-                            stm = _conexao.createStatement() ;
-
-                            ResultSet dados;
-                            dados = stm.executeQuery(select) ;
-
-                            
-
-                            while ( dados.next() ) {
-                                out.print("<tr>") ;
-                                    out.print( "<td>") ;
-                                        out.print( dados.getString("CPF") );
-                                    out.print( "</td>") ;
-
-                                    out.print( "<td>") ;
-                                        out.print( dados.getString("NOME") );
-                                    out.print( "</td>") ;
-
-                                    out.print( "<td>") ;
-                                        out.print( dados.getString("DATA_NASCIMENTO") );
-                                    out.print( "</td>") ;
-
-                                    out.print( "<td>") ;
-                                        out.print( dados.getString("EMAIL") );
-                                    out.print( "</td>") ;
-
-                                    out.print( "<td>") ;
-                                        out.print( dados.getString("TELEFONE") );
-                                    out.print( "</td>") ;
-                                out.print("</tr>") ;
-                            }
-
-                            _conexao.close();
-                            stm.close();
+                                out.print( "<td>") ;
+                                    out.print( dados.getString("TELEFONE") );
+                                out.print( "</td>") ;
+                            out.print("</tr>") ;
+                        }
                         
                         %>
                         </tbody>
@@ -134,3 +133,10 @@
     
     </body>
 </html>
+
+<%
+
+_conexao.close();
+stm.close();
+
+%>
